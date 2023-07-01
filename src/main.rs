@@ -8,6 +8,7 @@
 /* Q/A
 - What is the difference between calling "hashmap.insert(...)" & "&mut hashmap.insert(...)"?
 - What is the difference between "for (k, v) in heroes {...}" & "for (k, v) in heroes.iter() {...}" while making through a for-loop?
+- What is the difference between "string" and &"string"?
 
 [Minor]
 - What is a macro?
@@ -46,11 +47,33 @@ fn main() {
     // VARIATION-1: get the value of key "Batman" / similar to Pythonic way
     println!("Hero of \"Batman\": {}", heroes["Batman"]);
     
-    // VARIATION-1: get the value of key "The Flash" / uisng the rust's HashMap's "get()" func
-    let hero_name_option_value: Option<&&str> = heroes.get("The Flash");
-    let hero_name_string_value: String = hero_name_option_value.unwrap().to_string();
+    // VARIATION-2: get the value of key "The Flash" / uisng the rust's HashMap's "get()" func
+    let hero_name_option_value: Option<&&str> = heroes.get("The Flash");    // VARIANT-1
+    // let hero_name_option_value = heroes.get(&"The Flash");    // VARIANT-2
+    let hero_name_string_value: String = hero_name_option_value.unwrap().to_string();   // This is highly discouraged; better appraoch: Use "match" expression with "Some().....None".
     println!("Hero of \"The Flash\": {}", hero_name_string_value);
 
+    // Try to get the value of a non-existing key & handle the scenario of finding a value/None before making any further computation.
+    let hero_key_name = "Spiderman"; 
+    let key_value = heroes.get(&hero_key_name);
+    match key_value {
+        Some(x) => println!("key_value: {}", x),
+        None => println!("No key is found!"),
+    }
+    
     // Check if a specific key exists in a hashmap before doing further computation
-
+    let hero_key_name = "Superman"; 
+    if heroes.contains_key(&hero_key_name) {
+        println!("\"{}\" key exists!", &hero_key_name);
+        // get the value using the hashmap-key, since the key exists.
+        let key_value = heroes.get(&hero_key_name);
+        // println!("key_value: {}", &key_value.unwrap().to_string()); // NB: [DISCOURAGED] Since the scope of getting the value from a hashmap is scopified with checking if the key exists in the hashmap, then it's safe to use the ".unwrap().to_string()" function.
+        // [from the prev comment]: BUT IT'S HIGHLY ENCOURAGED TO USE THE "match" EXPRESSION WITH "Some() => ...., None => ...,"
+        // Such approach covers if the "key" has a value/ not (if key doesn't exist, then the value will be None) in the hashmap to make further computation.
+        // NB: By executing the "match" expression in such approach, it's similar to the if-check of ".contains_key(&key_name)" method.
+        match key_value {
+            Some(x) => println!("key_value: {}", x),
+            None => println!("No key is found!"),
+        }
+    }
 }
