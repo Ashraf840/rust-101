@@ -3,15 +3,26 @@
 /*
 - HashMap: Use to store key-value pairs; like native DICTIONARY IN PYTHON.
 - Print a hashmap using the "println!(".... {:?}", HashMap_var)" macro.
+- Loop through the key & values of a hashmap. (2 variations)
+    - for-loop straightly to the hashmap.
+    - for-loop to the hashmap.iter() function.
+- Length of a hashmap.
+- Get the value of a specific key from a hashmap. (Pythonic version)
+- get the value of a specific key from a hashmap. (uisng the "get()" func)
+- Make futher computations based on the exisitence of key of the hashmap using the 2 variantional approaches:
+    - HashMap_var.contains_key(&key_name)
+    - "match" expression w/ "Some() ..... None"
 */
 
 /* Q/A
 - What is the difference between calling "hashmap.insert(...)" & "&mut hashmap.insert(...)"?
 - What is the difference between "for (k, v) in heroes {...}" & "for (k, v) in heroes.iter() {...}" while making through a for-loop?
 - What is the difference between "string" and &"string"?
+- Difference among &str, &&str, &&&str?
 
 [Minor]
 - What is a macro?
+- What is the .iter()" function?
 */
 
 
