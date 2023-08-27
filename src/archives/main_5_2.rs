@@ -19,9 +19,9 @@ fn main() {
         .expect("Age doesn't assing integer value!");
 
     match age {
-        1..=18 => println!("Important birthday!"),          // if
-        21 | 50 => println!("Important birthday!"),         // else if
-        65..=u8::MAX => println!("Important birthday!"),    // else if
+        1..=18 => println!("Important birthday!"),          // if; ranging from 1 to 18
+        21 | 50 => println!("Important birthday!"),         // else if; 21 or 50
+        65..=u8::MAX => println!("Important birthday!"),    // else if; ranging from 65 to max of unsigned 8 ()
         _ => println!("Not important birthday!"),           // everything else
     };
 }
