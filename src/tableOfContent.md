@@ -1,9 +1,10 @@
 # Rust Tutorial
 
-Video Ref: [Rust Tutorial Full Course](https://www.youtube.com/watch?v=ygL_xcavzQ4) <br/>
-Author: [Derek Banas ](https://www.youtube.com/@derekbanas)
+> Video Ref: [**Rust Tutorial Full Course**](https://www.youtube.com/watch?v=ygL_xcavzQ4) <br/>
+Author: [**Derek Banas**](https://www.youtube.com/@derekbanas) <br/>
+_NB: The tutorial files reside inside the "**./src/archives**" dir._
 
-The tutorial files reside inside the "**./src**" dir. <br/><br/>
+<br/><br/>
 
 <h3 align="center"><u>Table of Conent</u></h3>  <br/>
 
@@ -24,6 +25,6 @@ The tutorial files reside inside the "**./src**" dir. <br/><br/>
 | **main_0.rs** |  left-aligned | $1600 |
 | **main_0.rs** |  left-aligned | $1600 |
 | **main_0.rs** |  left-aligned | $1600 |
-| **main_15.rs** |  HashMap::new(); hashmap_var.insert(); println!("{:?}"); for-loop on hashmap_var; for-loop on hashmap_var.iter(); hashmap_var.len(); hashmap_var["keyName"]; hashmap.get("keyName"); .unwrap().to_string(); "match" expression with "Some(x) .... None"; hashmap_var.contains_keys() | Create empty Hashmap; Insert key-value to hashmap; Print out hashmap's key-value using the "**{:?}**" format-specifier; For-loop through the key, value pair of hashmap_var/ [other variant] hashmap_var.**iter()**; Length of hashmap; Get value of hashmap uisng Pythonic way, "**hashmap["keyName"]**"; Get value of hashmap uisng the "**.get()**" method; Handle further computation based on value-existence/None; Unlike being more precise of the situation, almost similar safety-check is performed using the "**hashmap_var.contains_key()**" method w/ if-cond. |
+| **main_15.rs** |  HashMap::new(); hashmap_var.insert(); println!("{:?}"); for-loop on hashmap_var; for-loop on hashmap_var.iter(); hashmap_var.len(); hashmap_var["keyName"]; hashmap.get("keyName"); .unwrap().to_string(); "match" expression with "Some(x) .... None"; hashmap_var.contains_keys() | Create empty Hashmap; Insert key-value to hashmap; Print out hashmap's key-value using the "**{:?}**" format-specifier; For-loop through the (*key, value*) pair of hashmap_var/ [*other variant*] hashmap_var.**iter()**; Length of hashmap; [*Type-1*] Get a value from hashmap uisng Pythonic way, "**hashmap["keyName"]**"; [*Type-2*] Get value of hashmap using the "**.get()**" method; Handle further computation based on value-existence/None; Unlike being more precise of the situation, almost similar safety-check is performed using the "**hashmap_var.contains_key()**" method w/ if-cond. |
 
 </div>
