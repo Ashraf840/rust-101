@@ -11,4 +11,6 @@ fn main() {
     io::stdin().read_line(&mut name)
         .expect("Don't receive any input!");
     println!("Hellow {}! {}", name.trim_end(), greeting);
+    // Prints out the actual values (including hidden new line char) as the standard output.
+    println!("Actual value of input \"name\": {:?}", name);
 }
