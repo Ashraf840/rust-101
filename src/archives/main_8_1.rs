@@ -59,8 +59,12 @@ fn main() {
     // }
     // println!("{}", 1..5);
 
+    // [3] Iterate through 1 to 5 (incld. 5)
+    // for i in 1..=5 {
+    //     println!("{}", i);
+    // }
 
-    // [3] replace the word "A" from the string-literal
+    // [4] replace the word "A" from the string-literal
     // let mut st2 = st1.replace("A", "Another");  // case-sensitive
     // println!("{}", st2);
 
