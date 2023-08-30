@@ -1,4 +1,4 @@
-// Tut-6.3: Array
+// Tut-6.3: Array (Python like "for loop")
 
 /*
 - For loop
