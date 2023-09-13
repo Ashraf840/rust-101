@@ -1,5 +1,7 @@
 // Tut-16: Struct
 
+// Ref Video: https://www.youtube.com/watch?v=gi0AQ78diSA
+
 /*
  * Miscellaneous
  * - Allow "dead_code" initially, since we aren't reading the fields of a struct type variable.
@@ -16,24 +18,27 @@
  *    - A struct might contain methods dedicated to that struct only.
  *    - While defining fields inide a struct skeleton, only define the field names including it's
  *    data type.
- *    - Best parctise while defining name of a struct: CamelCasing
+ *    - Best parctise while defining name of a struct: 
+        - Struct name in "PascalCasing"
+        - Oraganize the fields according to their names alphabetically
  * */
 
-#[allow(dead_code)]
+#![allow(dead_code)]
 
 fn main() {
     #[derive(Debug)]
     struct StructOne {
+        // Field names should be in "snake_case" & it's better to organize the fields alphabetically
+        some_bool: bool,
         some_int: i8,
         some_string: String,
-        some_bool: bool,
     }
 
     // Initially define an immutable variable using this struct ("struct_1")
     let mut var_struct =  StructOne  {
+        some_bool: true,
         some_int: -20,
         some_string: "This is a string".to_string(),
-        some_bool: true,
     };
 
     // Print a variable of a struct type; for this, use the "#[derive(Debug)]" attribute which
@@ -42,7 +47,7 @@ fn main() {
     println!("var_struct: {:?}", var_struct);
 
     // Until the LOC, the fields of the struct type variable weren't read, thus use the attribute
-    // "#[allow(dead_code)]". After this LOC, the attribute isn't required.
+    // "#![allow(dead_code)]". After this LOC, the attribute isn't required.
     println!("var_struct.some_int: {}", var_struct.some_int);
     println!("var_struct.some_string: {}", var_struct.some_string);
     println!("var_struct.some_bool: {}", var_struct.some_bool);

@@ -10,7 +10,8 @@
 
 
 /*  Q/A
-- Why "st8" doesn't have value unlike "st9" after assigned to "st10". ("st9" is used as "&st9")? 
+* - Why "st8" doesn't have value unlike "st9" after assigned to "st10". ("st9" is used as "&st9")? 
+* - Differences between "String::from()", "...".to_string(), "...".to_owned() 
 */
 
 

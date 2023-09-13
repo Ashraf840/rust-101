@@ -1,16 +1,18 @@
 // Tut-16.2.1: Struct (Visibility)
 
+// Ref Video: https://www.youtube.com/watch?v=gi0AQ78diSA
+
 /*
- * Objective
+ * Objectives
  * - Create a struct in another file (main_16_2_1.rs) & import it in this file (main_16_2_2.rs).
- * - Use composition to propagate fields from foreign struct (resides in another file) into this
- * file's native struct. Since 'inheritance' doesn't exist in Rust.
- * - Create a struct which will include fields from another struct using "composition".
+ * - Use composition to propagate fields from foreign struct (resides in another file) into this file's native struct. Since 'inheritance' doesn't exist in Rust.
+ * - Create a struct which will include fields from another struct using "Composition".
+ * - Access nested fields of the struct type var after it's defined using "Composition".
  * */
 
-// #[allow(dead_code)]
+#![allow(dead_code)]
 
-mod main_16_2_2;
+mod main_16_2_2;    // Require to access the external Rust file
 // use main_16_2_2::RandomInfo;    // Only import the "RandomStruct" struct
 use main_16_2_2::*;
 
@@ -25,7 +27,7 @@ fn main() {
     // Create a struct which will use 'Composition' to include the fields of "RandomInfo" struct
     // NB: Alternative of inheritance over composition.
     
-    #[allow(dead_code)]     // Since the no field is read from the variable build on this struct
+    // #![allow(dead_code)]     // Since the no field is read from the variable build on this struct
     #[derive(Debug)]
     struct StructOne {
         some_int_parent: u8,

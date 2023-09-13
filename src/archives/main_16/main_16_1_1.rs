@@ -1,6 +1,16 @@
-// Tut-16.1: Struct (Include method)
+// Tut-16.1: Struct (Includes method)
 
-#[allow(dead_code)]
+// Ref Video: https://www.youtube.com/watch?v=gi0AQ78diSA
+
+/*
+ * Objectives
+ * - Build a simple struct inside the "main()" func.
+ * - Define a variable based on the struct.
+ * - Print out the entire struct type var & each field of the var.
+ *      - Use double quotations inside the double quotations of "println!()".
+ */
+
+#![allow(dead_code)]
 
 fn main() {
     #[derive(Debug)]
