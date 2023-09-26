@@ -11,7 +11,7 @@
  * - Invoke the previously defined trait afterward creating those variables.
  */
 
- mod main_17_2_1;
+ mod main_17_2_1;   // Since rust defines this file as module, thus this file requires to be explicitly defined as "mod mod main_17_2_1". After then, we can use all the things of that page.
  use main_17_2_1::{Tweet, FbPost, NewsArticle, Summary};    // ***Required to import structs & traits
 
 fn main() {
