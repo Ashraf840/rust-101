@@ -20,6 +20,7 @@ struct Tweet {
     retweet: bool,
 }
 
+// Define (implement) both the functions' body; similar to function overriding
 impl Summary for Tweet {
     fn summarize_author(&self) -> String {
         format!("Tweeted by @{}", self.username)
@@ -36,6 +37,7 @@ struct NewsArticle {
     content: String,
 }
 
+// Define (implement) the "summarize_author()" func body, since the trait only has it's func signature
 impl Summary for NewsArticle {
     fn summarize_author(&self) -> String {
         format!("{}", self.author)
@@ -43,8 +45,9 @@ impl Summary for NewsArticle {
 }
 
 trait Summary {
-    fn summarize_author(&self) -> String;
+    fn summarize_author(&self) -> String;   // Function Signature
     
+    // Default function body
     fn summarize(&self) -> String {
         format!("Read more from {}", self.summarize_author())
     }

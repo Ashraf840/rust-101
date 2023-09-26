@@ -1,4 +1,4 @@
-// Tut-16: Struct (aka Structures)
+// Tut-16: Struct (aka Structures/Custom Data Structure)
 
 /*
 - Struct: A struct is a custom data type storing multiple different types of data.

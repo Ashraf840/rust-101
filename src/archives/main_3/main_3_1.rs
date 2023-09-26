@@ -1,12 +1,12 @@
 // Tut-3.1: Datatypes (Floating-point, Boolean, Character)
 
 /*
-Floating-Point
-Boolean
-Character
-Unsigned integer (Inside "main_3.rs" file)
-Signed integer (Inside "main_3.rs" file)
-*/
+ * Floating-Point
+ * Boolean
+ * Character
+ * Unsigned integer (Inside "main_3.rs" file)
+ * Signed integer (Inside "main_3.rs" file)
+ */
 
 fn main() {
     // Unused variables; make rust-compiler ignore the warning ragrding unused variable(s)

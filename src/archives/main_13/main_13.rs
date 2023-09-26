@@ -2,7 +2,7 @@
 
 /*
 - Generics: Mainly used to create functions that can work with multiple different types of data.
-- It can be used with structs, enums, traits etc.
+- Also it can be used with structs, enums, traits etc.
 */
 #![allow(unused)]
 // Import "Add" trait, which specifies addition operator for different data types

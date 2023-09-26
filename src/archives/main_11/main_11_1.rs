@@ -8,6 +8,7 @@
  *      - Store multiple values of the same types only.
  * - What is "vec![]"?
  *      - It's a Rust macro which used to create a new vector collection with initial values.
+ * What is the differences between Array & Vector in rust?
  */
 
 /*

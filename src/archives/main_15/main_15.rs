@@ -66,7 +66,7 @@ fn main() {
 
     // Try to get the value of a non-existing key & handle the scenario of finding a value/None before making any further computation.
     let hero_key_name = "Spiderman"; 
-    let key_value = heroes.get(&hero_key_name);
+    let key_value = heroes.get(&hero_key_name);     // "get()" function returns "Some()" type
     match key_value {
         Some(x) => println!("key_value: {}", x),
         None => println!("No key is found!"),
@@ -78,6 +78,8 @@ fn main() {
         println!("\"{}\" key exists!", &hero_key_name);
         // get the value using the hashmap-key, since the key exists.
         let key_value = heroes.get(&hero_key_name);
+
+        // [In this code-block, match is redundant/unnecessary]
         // println!("key_value: {}", &key_value.unwrap().to_string()); // NB: [DISCOURAGED] Since the scope of getting the value from a hashmap is scopified with checking if the key exists in the hashmap, then it's safe to use the ".unwrap().to_string()" function.
         // [from the prev comment]: BUT IT'S HIGHLY ENCOURAGED TO USE THE "match" EXPRESSION WITH "Some() => ...., None => ...,"
         // Such approach covers if the "key" has a value/ not (if key doesn't exist, then the value will be None) in the hashmap to make further computation.
